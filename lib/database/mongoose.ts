@@ -19,7 +19,7 @@ if (!cached) {
   };
 }
 
-export const connectionToDatabase = async () => {
+export const connectToDatabase = async () => {
   // Check if Mongoose connection object is already cached, if so, return it for optimization
   if (cached.conn) return cached.conn;
 
