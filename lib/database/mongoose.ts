@@ -1,6 +1,6 @@
 import mongoose, { Mongoose } from "mongoose";
 
-const MONGODB_URL = process.env.MONGODB_URI;
+const MONGODB_URL = process.env.MONGODB_URL;
 
 // Define interface for caching Mongoose connection and promise
 interface MongooseConnection {
