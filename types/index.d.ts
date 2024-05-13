@@ -55,6 +55,14 @@ declare type UpdateImageParams = {
   path: string;
 };
 
+declare type MediaUploaderProps = {
+  onValueChange: (value: string) => void;
+  setImage: React.Dispatch<any>;
+  publicId: string;
+  image: any;
+  type: string;
+};
+
 declare type Transformations = {
   restore?: boolean;
   fillBackground?: boolean;
@@ -120,7 +128,7 @@ declare type SearchParamProps = {
 
 declare type TransformationFormProps = {
   action: "Add" | "Update";
-  userId: string ;
+  userId: string;
   type: TransformationTypeKey;
   creditBalance: number;
   data?: IImage | null;
