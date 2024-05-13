@@ -34,6 +34,7 @@ import { useState, useTransition } from "react";
 import { AspectRatioKey, debounce, deepMergeObjects } from "@/lib/utils";
 import { updateCredits } from "@/lib/actions/user.actions";
 import MediaUploader from "./MediaUploader";
+import TransfromedImage from "./TransformedImage";
 
 export const formSchema = z.object({
   title: z.string(),
@@ -227,7 +228,6 @@ const TransformationForm = ({
             className="flex flex-col size-full"
             control={form.control}
             name="publicId"
-            formLabel="Media Uploader"
             render={({ field }) => (
               <MediaUploader
                 onValueChange={field.onChange}
@@ -237,6 +237,15 @@ const TransformationForm = ({
                 type={type}
               />
             )}
+          />
+
+          <TransfromedImage
+            image={image}
+            type={type}
+            title={form.getValues().title}
+            isTransforming={isTransforming}
+            setIsTransforming={setIsTransforming}
+            transformationConfig={transformationConfig}
           />
         </div>
 
