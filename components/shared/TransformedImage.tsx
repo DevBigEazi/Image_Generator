@@ -14,7 +14,7 @@ const TransformedImage = ({
   hasDownload = false,
 }: TransformedImageProps) => {
   const downloadHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDeafault();
+    // e.preventDeafault();
   };
 
   return (
